@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pokemon_catcher/pages/catch_pokemon_page.dart';
+import 'package:pokemon_catcher/view/pages/catch_pokemon_page.dart';
 
 void main() {
   runApp(const MyApp());
