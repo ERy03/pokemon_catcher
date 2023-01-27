@@ -15,6 +15,7 @@ class PokemonRepositoryImpl implements PokemonRepository {
 
   @override
   Future<Either<Exception, Pokemon>> getPokemon() async {
+    await Future.delayed(const Duration(seconds: 2));
     try {
       final id = Random().nextInt(1008).toString();
       final pokemon = await _restApiService.getPockemon(id);
