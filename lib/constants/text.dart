@@ -1,0 +1,1 @@
+const catchPokemon = 'Catch Pokemon';
