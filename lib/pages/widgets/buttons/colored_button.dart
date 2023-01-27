@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:pokemon_catcher/constants/colors.dart';
 
 class ColoredButton extends StatelessWidget {
   const ColoredButton({
     required this.text,
-    required this.backgroundColor,
-    required this.foregroundColor,
+    this.backgroundColor = brightRed,
+    this.foregroundColor = darkerRed,
     this.textColor = Colors.white,
     required this.onPressed,
     super.key,
   });
 
   final String text;
-  final Color backgroundColor;
-  final Color foregroundColor;
+  final Color? backgroundColor;
+  final Color? foregroundColor;
   final Color? textColor;
   final VoidCallback onPressed;
 
