@@ -24,22 +24,24 @@ class RestApiService implements RestApiServiceAbstract {
       if (response.statusCode == 200) {
         return Either.right(
           Pokemon(
-            id: response.data['id'],
-            name: response.data['name'],
-            order: response.data['order'],
-            height: response.data['height'],
-            weight: response.data['weight'],
+            id: response.data['id'] ?? 1,
+            name: response.data['name'] ?? '1',
+            order: response.data['order'] ?? 1,
+            height: response.data['height'] ?? 1,
+            weight: response.data['weight'] ?? 1,
             sprites: Sprites(
-              frontDefault: response.data['sprites']['front_default'],
-              frontShiny: response.data['sprites']['front_shiny'],
-              backDefault: response.data['sprites']['back_default'],
-              backShiny: response.data['sprites']['back_shiny'],
+              frontDefault: response.data['sprites']['front_default'] ?? '1',
+              frontShiny: response.data['sprites']['front_shiny'] ?? '1',
+              backDefault: response.data['sprites']['back_default'] ?? '1',
+              backShiny: response.data['sprites']['back_shiny'] ?? '1',
               other: Other(
                 officialArtwork: OfficialArtwork(
                   frontDefault: response.data['sprites']['other']
-                      ['official-artwork']['front_default'],
+                          ['official-artwork']['front_default'] ??
+                      '1',
                   frontShiny: response.data['sprites']['other']
-                      ['official-artwork']['front_shiny'],
+                          ['official-artwork']['front_shiny'] ??
+                      '1',
                 ),
               ),
             ),
